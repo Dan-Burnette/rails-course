@@ -4,6 +4,8 @@ Metube::Application.routes.draw do
 
   resources :videos
 
+  resources :sounds
+
   # get "/videos", to: "videos#index"
 
   # get "/videos/new", to: "videos#new"
