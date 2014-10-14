@@ -10,4 +10,8 @@ Metube::Application.routes.draw do
 
   post '/videos', to: "videos#create"
 
+  get "/videos/:id/edit", to: "videos#edit"
+
+  put "/videos/:id", to: "videos#update"
+
 end

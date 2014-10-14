@@ -14,7 +14,7 @@ class VideosController < ApplicationController
   def create
     video = Video.new(video_params)
     video.save
-    redirect_to_root_path
+    redirect_to root_path
   end
 
   private
