@@ -4,11 +4,10 @@ Metube::Application.routes.draw do
 
   get "/videos", to: "videos#index"
 
+  get "/videos/new", to: "videos#new"
+
   get "/videos/:id", to: "videos#show"
 
-  get "/videos/new", to: "videos#new"
-  
-  
+  post '/videos', to: "videos#create"
 
-  
 end
