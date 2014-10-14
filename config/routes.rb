@@ -14,4 +14,6 @@ Metube::Application.routes.draw do
 
   put "/videos/:id", to: "videos#update"
 
+  delete 'videos/:id' to: "videos#destroy"
+
 end
