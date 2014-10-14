@@ -2,18 +2,20 @@ Metube::Application.routes.draw do
 
   root to: "videos#index"
 
-  get "/videos", to: "videos#index"
+  resources :videos
 
-  get "/videos/new", to: "videos#new"
+  # get "/videos", to: "videos#index"
 
-  get "/videos/:id", to: "videos#show"
+  # get "/videos/new", to: "videos#new"
 
-  post '/videos', to: "videos#create"
+  # get "/videos/:id", to: "videos#show"
 
-  get "/videos/:id/edit", to: "videos#edit"
+  # post '/videos', to: "videos#create"
 
-  put "/videos/:id", to: "videos#update"
+  # get "/videos/:id/edit", to: "videos#edit"
 
-  delete 'videos/:id' to: "videos#destroy"
+  # put "/videos/:id", to: "videos#update"
+
+  # delete 'videos/:id', to: "videos#destroy"
 
 end
