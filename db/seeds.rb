@@ -16,26 +16,26 @@ User.create([
   }
   ])
 
-Video.create([
-  {
+
+video1 = Video.create(
     title: "Gladiator",
     description: "A great movie",
     youtube_id: "rNdKBPcVGJI",
-    user_id: 1
-  },
-  {
+    user_id: 1)
+
+video2 = Video.create(
     title: "Pacific Rim",
     description: "Giant robots fighting giant sea monsters",
     youtube_id: "SSNU6t0pmkw",
-    user_id: 2
-  },
-  {
+    user_id: 2)
+
+video3 = Video.create(
     title: "Frozen",
     description: "Cold 3D Animation",
     youtube_id: "FLzfXQSPBOg",
-    user_id: 1
-  }
-  ])
+    user_id: 1)
+
+
 
 Sound.create([ 
   {
@@ -47,5 +47,9 @@ Sound.create([
     soundcloud_url: "https://soundcloud.com/makersquare/sitcom-don"
   }
   ])
+
+video1.comments.create(comment: "Gladiator is le worst thing evar")
+video2.comments.create(comment: "I am here from le reddit to tip my fedora at thee")
+video2.comments.create(comment: "dingus dingus dingus.")
 
 
