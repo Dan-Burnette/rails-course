@@ -18,14 +18,14 @@ $(document).on('click', '.edit-comment-button', function() {
 })
 
 $(document).on('click', '.edit-submit', function() {
-	var commentText = $(this).prev().text();
+	var commentText = $(this).prev().val();
+	console.log(commentText);
 	var commentId = $(this).next().val();
 	var videoId = $('.video_id').val();
 	var myJSON = {};
 	myJSON['comment'] = commentText;
-	// myJSON['commentId'] = commentId;
-	// myJSON['videoId'] = videoId;
 	var myURL = "/videos/" + videoId + "/comments/" + commentId; 
+
 	$.ajax({
 	  url: myURL,
 	  data: myJSON,
