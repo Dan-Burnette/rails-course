@@ -17,9 +17,9 @@
 
 <%= form_tag("/videos/#{@video.id}/comments", method:"post") do %>
 
-	<%= label_tag("comment[comment]", "Write a comment") %>
-	<%= text_field_tag("comment[comment]") %>
-	<%= hidden_field_tag('comment[video_id]', @video.id) %>
+	<%= label_tag("comment", "Write a comment") %>
+	<%= text_field_tag("comment") %>
+
 	<%= submit_tag("submit") %>
 
 <% end %>
