@@ -1,0 +1,15 @@
+<%= @user.name %>
+
+<% @bikes.each do |b|%>
+	<ul>
+		<li>Bike ID: <%=b.id %> Bike Color: <%= b.color%></li>
+		<%= link_to 'delete bike', user_bike_path(@user.id,b.id) , method: 'DELETE' %>
+	</ul>
+<% end %>
+
+<%= form_tag(user_bikes_path(@user.id), method: 'POST') do %>
+	<label>Enter the color of your new bike</label>
+	<input type="text" name='bike[color]' value='<%=@bike.color%>'> 
+	<input type="hidden" name='bike[user_id]' value='<%=@user.id%>'> 
+	<input type="submit" value="submit">
+<%end%>
